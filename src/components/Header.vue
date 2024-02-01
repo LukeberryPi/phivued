@@ -1,7 +1,7 @@
 <script setup></script>
 
 <template>
-  <nav class="flex justify-between px-6 items-center">
+  <nav class="flex justify-between px-4 items-center">
     <h1
       class="font-bold text-3xl underline-offset-4 underline decoration-berryBlue decoration-4"
     >
