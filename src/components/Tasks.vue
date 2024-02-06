@@ -2,10 +2,9 @@
 import { ref } from "vue";
 const tasks = ref(Array(5).fill("a"));
 
-function deleteTask(index) {
-  const t = tasks.value.map((task, i) => i === index ? "" : task);
+function deleteTask(idx) {
+  const t = tasks.value.map((task, i) => (i === idx ? "" : task));
   tasks.value = t;
-  return tasks.value;
 }
 </script>
 
@@ -18,7 +17,7 @@ function deleteTask(index) {
       class="group flex items-center justify-between"
     >
       <input
-        :value="task"
+        v-model="tasks[index]"
         :placeholder="index === 0 ? 'watch the office' : ''"
         class="w-full h-12 px-4 focus:outline-none py-3"
       />
